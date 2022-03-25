@@ -1,5 +1,11 @@
 import FeedbackItem from './FeedbackItem'
-function FeedbackList({feedback,yaseenDelete}) {
+import { useContext } from 'react'
+
+import FeedbackContext from '../context/FeedbackContext'
+
+function FeedbackList({ yaseenDelete}) {
+    const { feedback,  } = useContext(FeedbackContext)
+
     if ( ! feedback || feedback.length === 0){
    return <p> no feedback yet</p>
     
